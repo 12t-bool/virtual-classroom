@@ -23,9 +23,7 @@ public class TeacherAssignmentServlet extends HttpServlet {
     private CourseDAO courseDAO;
 
 
-    // =====================================================
-    // INIT
-    // =====================================================
+  
 
     @Override
     public void init() {
@@ -35,10 +33,7 @@ public class TeacherAssignmentServlet extends HttpServlet {
     }
 
 
-    // =====================================================
-    // GET
-    // OPEN ASSIGNMENTS PAGE
-    // =====================================================
+   
 
     @Override
     protected void doGet(
@@ -47,9 +42,7 @@ public class TeacherAssignmentServlet extends HttpServlet {
             throws ServletException, IOException {
 
 
-        // =================================================
-        // CHECK SESSION
-        // =================================================
+        
 
         HttpSession session =
                 request.getSession(false);
@@ -70,25 +63,23 @@ public class TeacherAssignmentServlet extends HttpServlet {
         }
 
 
-        // =================================================
         // GET TEACHER ID
-        // =================================================
+        
 
         int teacherId =
                 (Integer) session.getAttribute("userId");
 
 
-        // =================================================
         // GET TEACHER COURSES
-        // =================================================
+        
 
         List<Course> courses =
                 courseDAO.getCoursesByTeacher(teacherId);
 
 
-        // =================================================
+        
         // SEND COURSES TO JSP
-        // =================================================
+      
 
         request.setAttribute(
                 "courses",
