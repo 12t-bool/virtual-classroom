@@ -73,11 +73,11 @@ VirtualClassroom/
 
 ## 🔐 User Roles
 
-The system supports three roles:
+The system supports two roles:
 
 * **Student**
 * **Teacher**
-* **Admin**
+
 
 Users are redirected to the appropriate dashboard according to their role after login.
 
