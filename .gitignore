@@ -1,0 +1,7 @@
+/build/
+/dist/
+/nbproject/private/
+/nbproject/var/
+/nbproject/cache/
+*.class
+*.log
